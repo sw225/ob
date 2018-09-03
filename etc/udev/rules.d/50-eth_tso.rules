@@ -1,0 +1,2 @@
+ACTION=="add", SUBSYSTEM=="net", KERNEL=="eth*", RUN+="/sbin/ethtool -K %k tso off"
+ACTION=="add", SUBSYSTEM=="net", KERNEL=="ens*", RUN+="/sbin/ethtool -K %k tso off"

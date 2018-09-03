@@ -1,0 +1,31 @@
+<div class="wrap_setup_carrier ctt">
+
+	<h3>キャリア別送信設定</h3>
+
+	<div class="ctt_inner">
+		<p>
+			キャリア別の送信数上限を設定します<br />
+			各アカウントの送信数は毎日0時にリセットされます
+		</p>
+
+		<form method="post">
+			<table class="list_table no1">
+				<tr>
+					<th>No</th>
+					<th>Carrier</th>
+					<th>送信上限</th>
+				</tr>
+				<!-- tmpl:loop %loop_carrier% -->
+				<tr>
+					<td>%carrier_num%<input type="hidden" name="chk[]" value="%carrier_id%" /></td>
+					<td>%carrier_domain%</td>
+					<td><input type="text" name="send_limit%carrier_num%" value="%carrier_send_limit%" /></td>
+				</tr>
+				<!-- tmpl:endloop %loop_carrier% -->
+			</table>
+			<input type="submit" value="変更" />
+		</form>
+
+	</div>
+
+</div>

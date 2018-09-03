@@ -1,0 +1,126 @@
+[Sun Jul 30 04:42:03 2017] [notice] Digest: generating secret for digest authentication ...
+[Sun Jul 30 04:42:03 2017] [notice] Digest: done
+[Sun Jul 30 04:42:03 2017] [notice] Apache/2.2.15 (Unix) DAV/2 PHP/5.3.3 configured -- resuming normal operations
+[Sun Jul 30 06:44:58 2017] [error] [client 94.102.49.175] client denied by server configuration: /usr/share/phpMyAdmin/scripts
+[Sun Jul 30 06:44:59 2017] [error] [client 94.102.49.175] client denied by server configuration: /usr/share/phpMyAdmin/scripts
+[Mon Jul 31 02:26:29 2017] [error] [client 94.102.49.175] client denied by server configuration: /usr/share/phpMyAdmin/scripts
+[Mon Jul 31 02:26:31 2017] [error] [client 94.102.49.175] client denied by server configuration: /usr/share/phpMyAdmin/scripts
+[Mon Jul 31 07:32:52 2017] [error] [client 141.212.122.128] client sent HTTP/1.1 request without hostname (see RFC2616 section 14.23): /x
+[Tue Aug 01 00:30:33 2017] [error] [client 164.52.7.132] request failed: error reading the headers
+[Thu Aug 03 21:05:07 2017] [error] [client 112.120.2.105] Invalid URI in request GET login.cgi HTTP/1.0
+[Fri Aug 04 10:22:59 2017] [error] [client 51.37.213.236] Invalid URI in request GET login.cgi HTTP/1.0
+[Fri Aug 04 10:42:10 2017] [error] [client 59.51.125.130] user  not found: /manager/html
+[Fri Aug 04 18:04:46 2017] [error] [client 218.93.201.199] user  not found: /manager/html
+[Fri Aug 04 18:04:47 2017] [error] [client 218.93.201.199] user admin not found: /manager/html
+[Fri Aug 04 18:04:48 2017] [error] [client 218.93.201.199] user admin not found: /manager/html
+[Fri Aug 04 18:04:48 2017] [error] [client 218.93.201.199] user admin not found: /manager/html
+[Fri Aug 04 18:04:48 2017] [error] [client 218.93.201.199] user tomcat not found: /manager/html
+[Fri Aug 04 18:04:49 2017] [error] [client 218.93.201.199] user tomcat not found: /manager/html
+[Fri Aug 04 18:04:49 2017] [error] [client 218.93.201.199] user tomcat not found: /manager/html
+[Sat Aug 05 12:23:32 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:33 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:33 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:34 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:34 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:35 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:35 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:36 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:36 2017] [error] [client 185.92.72.12] user Admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:37 2017] [error] [client 185.92.72.12] user Admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:38 2017] [error] [client 185.92.72.12] user  not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:38 2017] [error] [client 185.92.72.12] user  not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:39 2017] [error] [client 185.92.72.12] user root not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:39 2017] [error] [client 185.92.72.12] user root not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:40 2017] [error] [client 185.92.72.12] user root not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:40 2017] [error] [client 185.92.72.12] user root not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:41 2017] [error] [client 185.92.72.12] user root not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:41 2017] [error] [client 185.92.72.12] user root not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:42 2017] [error] [client 185.92.72.12] user root not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:43 2017] [error] [client 185.92.72.12] user root not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:43 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:44 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:44 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:45 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:45 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:46 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:47 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:47 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:48 2017] [error] [client 185.92.72.12] user airlive not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:48 2017] [error] [client 185.92.72.12] user airlive not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:49 2017] [error] [client 185.92.72.12] user  not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:49 2017] [error] [client 185.92.72.12] user  not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:50 2017] [error] [client 185.92.72.12] user  not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:50 2017] [error] [client 185.92.72.12] user  not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:51 2017] [error] [client 185.92.72.12] user support not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:52 2017] [error] [client 185.92.72.12] user support not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:52 2017] [error] [client 185.92.72.12] user support not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:53 2017] [error] [client 185.92.72.12] user support not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:53 2017] [error] [client 185.92.72.12] user super not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:54 2017] [error] [client 185.92.72.12] user super not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:54 2017] [error] [client 185.92.72.12] user super not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:55 2017] [error] [client 185.92.72.12] user super not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:55 2017] [error] [client 185.92.72.12] user super not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:57 2017] [error] [client 185.92.72.12] user super not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:57 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:58 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:59 2017] [error] [client 185.92.72.12] user super not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:23:59 2017] [error] [client 185.92.72.12] user super not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:00 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:00 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:01 2017] [error] [client 185.92.72.12] user mts not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:01 2017] [error] [client 185.92.72.12] user mts not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:02 2017] [error] [client 185.92.72.12] user telecomadmin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:02 2017] [error] [client 185.92.72.12] user telecomadmin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:03 2017] [error] [client 185.92.72.12] user mgts not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:04 2017] [error] [client 185.92.72.12] user mgts not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:04 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:05 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:05 2017] [error] [client 185.92.72.12] user  not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:06 2017] [error] [client 185.92.72.12] user  not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:06 2017] [error] [client 185.92.72.12] user kyivstar not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:07 2017] [error] [client 185.92.72.12] user kyivstar not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:07 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:08 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:08 2017] [error] [client 185.92.72.12] user telekom not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:09 2017] [error] [client 185.92.72.12] user telekom not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:10 2017] [error] [client 185.92.72.12] user superadmin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:10 2017] [error] [client 185.92.72.12] user superadmin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:11 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:11 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:12 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:12 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:13 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:13 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:14 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:15 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:15 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:16 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:16 2017] [error] [client 185.92.72.12] user engineer not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:17 2017] [error] [client 185.92.72.12] user engineer not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:17 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:18 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:18 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:19 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:20 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:20 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:21 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:21 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:22 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:22 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:23 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:24 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:24 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:25 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:25 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:26 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:26 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:27 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:27 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:28 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:28 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:29 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:30 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:30 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 12:24:31 2017] [error] [client 185.92.72.12] user admin not found: /, referer: http://153.126.153.25/
+[Sat Aug 05 17:42:11 2017] [error] [client 104.211.184.63] user  not found: /manager/html
+[Sun Aug 06 03:45:02 2017] [notice] SIGHUP received.  Attempting to restart

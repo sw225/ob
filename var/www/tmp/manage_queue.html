@@ -1,0 +1,100 @@
+<div class="wrap_manage_queue ctt">
+
+	<h3>キュー管理</h3>
+
+	<div class="ctt_inner">
+		<p>キューの確認・削除等を行います</p>
+
+		<div class="wrap_queue_length">
+			%queue_length%件
+		</div>
+
+		<form method="post" class="mb50">
+			<input type="submit" name="manage_queue" value="ドメイン別表示" />
+			<input type="submit" name="manage_queue" value="キュー詳細" />
+			<input type="submit" name="manage_queue" value="全件削除" />
+		</form>
+
+		<div class="queue_sub">
+			<!-- tmpl:ifdef %queue_domain% -->
+			<h5 class="clear">ドメイン別表示</h5>
+			<form method="post">
+				<input type="hidden" name="manage_queue" value="ドメイン別表示" />
+				<input type="hidden" name="mtd" value="delete" />
+				<table class="list_table no">
+					<tr>
+						<th>
+							<div class="chk_del">
+								<input type="checkbox" id="chk_del" />
+								<label for="chk_del"></label>
+							</div>
+						</th>
+						<th>ドメイン</th>
+						<th>件数</th>
+					</tr>
+					<!-- tmpl:loop %loop_queue_domain% -->
+					<tr>
+						<td>
+							<div class="chk_del">
+								<input type="checkbox" name="chk[]" id="chk_del%queue_domain_id%" value="%queue_domain_ids%" />
+								<label for="chk_del%queue_domain_id%"></label>
+							</div>
+						</td>
+						<td>%queue_domain_name%</td>
+						<td>%queue_domain_length%</td>
+					</tr>
+					<!-- tmpl:endloop %loop_queue_domain% -->
+				</table>
+				<input type="submit" value="削除" id="btn_del" />
+			</form>
+			<!-- tmpl:endif -->
+			<!-- tmpl:ifdef %queue_detail% -->
+			<h5 class="clear">キュー詳細</h5>
+			<form method="post">
+				<input type="hidden" name="manage_queue" value="キュー詳細" />
+				<input type="hidden" name="mtd" value="delete" />
+				<table class="list_table no msg toleft">
+					<tr>
+						<th>
+							<div class="chk_del">
+								<input type="checkbox" id="chk_del" />
+								<label for="chk_del"></label>
+							</div>
+						</th>
+						<th>アドレス</th>
+						<th>タイトル</th>
+						<th>日時</th>
+					</tr>
+					<!-- tmpl:loop %loop_queue_detail% -->
+					<tr>
+						<td>
+							<div class="chk_del">
+								<input type="checkbox" name="chk[]" id="chk_del%queue_detail_id%" value="%queue_detail_id%" />
+								<label for="chk_del%queue_detail_id%"></label>
+							</div>
+						</td>
+						<td>%queue_detail_to%</td>
+						<td>%queue_detail_title%</td>
+						<td class="rel">%queue_detail_created%<span><b>%queue_detail_title%</b>%queue_detail_message%</span></td>
+					</tr>
+					<!-- tmpl:endloop %loop_queue_detail% -->
+				</table>
+				<input type="submit" value="削除" id="btn_del" />
+			</form>
+			<div class="pages">
+%paging%
+			</div>
+			<!-- tmpl:endif -->
+			<!-- tmpl:ifdef %queue_delete% -->
+			<h5 class="clear">全件削除</h5>
+			<form method="post">
+				<input type="hidden" name="manage_queue" value="全件削除" />
+				<input type="hidden" name="mtd" value="delete" />
+				<input type="submit" value="削除" id="btn_del" />
+			</form>
+			<!-- tmpl:endif -->
+		</div>
+
+	</div>
+
+</div>

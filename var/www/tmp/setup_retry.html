@@ -1,0 +1,33 @@
+<div class="wrap_setup_retry ctt">
+
+	<h3>リトライ設定</h3>
+
+	<div class="ctt_inner">
+		<p>
+			エラー判定の出たアカウントのリトライ設定を行います<br />
+			試行時間で何時間後にリトライを行うか指定します
+		</p>
+
+		<form method="post">
+			<table class="list_table no1">
+				<tr>
+					<th>No</th>
+					<th>Carrier</th>
+					<th>リトライ数</th>
+					<th>試行時間</th>
+				</tr>
+				<!-- tmpl:loop %loop_retry% -->
+				<tr>
+					<td>%retry_num%<input type="hidden" name="chk[]" value="%retry_id%" /></td>
+					<td>%retry_domain%</td>
+					<td><input type="text" name="retry_count%retry_num%" value="%retry_count%"></td>
+					<td><input type="text" name="retry_time%retry_num%" value="%retry_time%"></td>
+				</tr>
+				<!-- tmpl:endloop %loop_retry% -->
+			</table>
+			<input type="submit" value="変更" />
+		</form>
+
+	</div>
+
+</div>

@@ -1,0 +1,2 @@
+/^.+$/ "| /usr/bin/php /var/www/mail/main.php"
+

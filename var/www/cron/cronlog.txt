@@ -1,0 +1,11 @@
+PHP Parse error:  syntax error, unexpected $end in /var/www/cron/main.php on line 201
+array(2) {
+  [0]=>
+  string(107) "10928 ?        Ss     0:00 /bin/sh -c /usr/bin/php /var/www/cron/main.php >> /var/www/cron/cronlog.txt 2>&1"
+  [1]=>
+  string(62) "10929 ?        S      0:00 /usr/bin/php /var/www/cron/main.php"
+}
+222
+
+https://teratail.com/questions/2926
+/usr/bin/php /var/www/cron/main.php >> /var/www/cron/cronlog.txt 2>&1

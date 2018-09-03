@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+html, body {
+	height: 100%;
+	min-height: 100%;
+}
+
+body {
+	font-family : "メイリオ", "Meiryo", "Osaka", "MS Pゴシック", "MSゴシック", "ヒラギノ角ゴ Pro W6", Helvetica, verdana, arial;
+	font-size: 0.8em;
+	letter-spacing: 1px;/*
+	min-width: 1440px;*/
+}
+input, textarea, button {
+	font-family : "メイリオ", "Meiryo", "Osaka", "MS Pゴシック", "MSゴシック", "ヒラギノ角ゴ Pro W6", Helvetica, verdana, arial;
+}
+
+
+a {
+	text-decoration: none;
+	-moz-transition: background 0.3s linear;
+	-webkit-transition: background 0.3s linear;
+	-o-transition: background 0.3s linear;
+	-ms-transition: background 0.3s linear;
+	transition: background 0.3s linear;
+
+}
+ul {
+	list-style-type: none;
+}
+label {
+	display: block;
+	font-weight: bold;
+}
+input[type="text"], input[type="password"], textarea, select { 
+	outline: none;
+}
+
+.rel {
+	position: relative;
+}
+.abs {
+	position: absolute;
+}
+.fxd {
+	position: fixed;
+}
+ 
+.clear:before, 
+.clear:after {
+	content: " ";
+	display: table;
+}
+.clear:after { 
+	clear: both; 
+}
+
+.hdn {
+	display: none;
+}
+.idt {
+	padding-left: 1em;
+}
+.idt2 {
+	padding-left: 2em;
+}
+.inblk {
+	display: inline-block;
+}
+
+.hmax {
+	height: 100%;
+	min-height: 100%;
+}
+.wmax {
+	width: 100%;
+}
+
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+
+.txtr { 
+	text-align: right;
+}
+.txtl { 
+	text-align: left;
+}
+
+ul.side li { 
+	float: left;
+} 
+
+.anime_bg { 
+	-moz-transition: background 0.2s linear;
+	-webkit-transition: background 0.2s linear;
+	-o-transition: background 0.2s linear;
+	-ms-transition: background 0.2s linear;
+	transition: background 0.2s linear;
+}
+
+
+.pt10 { padding-top: 10px; }
+.pt11 { padding-top: 11px; }
+.pt12 { padding-top: 12px; }
+.pt13 { padding-top: 13px; }
+.pt14 { padding-top: 14px; }
+.pt15 { padding-top: 15px; }
+.pt16 { padding-top: 16px; }
+.pt17 { padding-top: 17px; }
+.pt18 { padding-top: 18px; }
+.pt19 { padding-top: 19px; }
+.pt20 { padding-top: 20px; }
+.pt50 { padding-top: 50px; }
+
+.pb10 { padding-bottom: 10px; }
+.pb11 { padding-bottom: 11px; }
+.pb12 { padding-bottom: 12px; }
+.pb13 { padding-bottom: 13px; }
+.pb14 { padding-bottom: 14px; }
+.pb15 { padding-bottom: 15px; }
+.pb16 { padding-bottom: 16px; }
+.pb17 { padding-bottom: 17px; }
+.pb18 { padding-bottom: 18px; }
+.pb19 { padding-bottom: 19px; }
+.pb20 { padding-bottom: 20px; }
+.pb50 { padding-bottom: 50px; }
+
+.mt10 { margin-top: 10px; }
+.mt11 { margin-top: 11px; }
+.mt12 { margin-top: 12px; }
+.mt13 { margin-top: 13px; }
+.mt14 { margin-top: 14px; }
+.mt15 { margin-top: 15px; }
+.mt16 { margin-top: 16px; }
+.mt17 { margin-top: 17px; }
+.mt18 { margin-top: 18px; }
+.mt19 { margin-top: 19px; }
+.mt20 { margin-top: 20px; }
+.mt50 { margin-top: 50px; }
+
+.mb10 { margin-bottom: 10px; }
+.mb11 { margin-bottom: 11px; }
+.mb12 { margin-bottom: 12px; }
+.mb13 { margin-bottom: 13px; }
+.mb14 { margin-bottom: 14px; }
+.mb15 { margin-bottom: 15px; }
+.mb16 { margin-bottom: 16px; }
+.mb17 { margin-bottom: 17px; }
+.mb18 { margin-bottom: 18px; }
+.mb19 { margin-bottom: 19px; }
+.mb20 { margin-bottom: 20px; }
+.mb30 { margin-bottom: 30px; }
+.mb50 { margin-bottom: 50px; }
+
+.ml10 { margin-left: 10px; }
+.ml11 { margin-left: 11px; }
+.ml12 { margin-left: 12px; }
+.ml13 { margin-left: 13px; }
+.ml14 { margin-left: 14px; }
+.ml15 { margin-left: 15px; }
+.ml16 { margin-left: 16px; }
+.ml17 { margin-left: 17px; }
+.ml18 { margin-left: 18px; }
+.ml19 { margin-left: 19px; }
+.ml20 { margin-left: 20px; }
+
+.mr10 { margin-right: 10px; }
+.mr11 { margin-right: 11px; }
+.mr12 { margin-right: 12px; }
+.mr13 { margin-right: 13px; }
+.mr14 { margin-right: 14px; }
+.mr15 { margin-right: 15px; }
+.mr16 { margin-right: 16px; }
+.mr17 { margin-right: 17px; }
+.mr18 { margin-right: 18px; }
+.mr19 { margin-right: 19px; }
+.mr20 { margin-right: 20px; }
+

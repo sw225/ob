@@ -1,0 +1,103 @@
+<script src="cmn/js/lib/amchartp.js"></script>
+<script src="cmn/js/lib/pie.js"></script>
+<script src="cmn/js/chart_info.js"></script>
+
+<div class="wrap_info ctt">
+
+	<h3>インフォメーション</h3>
+
+	<div class="ctt_inner">
+		<div class="wrap_info_carrier">
+			<h5>対応キャリア</h5>
+			<table class="list_table toleft">
+				<tr>
+					<th>フリーアドレス</th>
+						<td><a href="http://www.yahoo.co.jp/" target="_blank">yahoo.co.jp</a></td>
+						<td><a href="https://www.google.co.jp/" target="_blank">gmail.com</a></td>
+						<td><a></a></td>
+						<td><a></a></td>
+						<td><a></a></td>
+						<td><a></a></td>
+						<td><a></a></td>
+						<td><a></a></td>
+				</tr>
+				<tr>
+					<th>海外アドレス</th>
+						<td><a href="http://www.gmx.com/" target="_blank">gmx.com</a></td>
+						<td><a></a></td>
+						<td><a></a></td>
+						<td><a></a></td>
+						<td><a></a></td>
+						<td><a></a></td>
+						<td><a></a></td>
+						<td><a></a></td>
+				</tr>
+				<tr>
+					<th>携帯アドレス</th>
+						<td><a>ezweb.ne.jp</a></td>
+						<td><a>i.softbank.jp</a></td>
+						<td><a></a></td>
+						<td><a></a></td>
+						<td><a></a></td>
+						<td><a></a></td>
+						<td><a></a></td>
+						<td><a></a></td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="wrap_info_use">
+			<h5>利用状況</h5>
+
+			<div class="wrap_info_send clear">
+				<strong>送信数</strong>
+				<div class="left">
+					<span>当日合計</span>
+					<p id="send_day">0</p>
+				</div>
+				<div class="left">
+					<span>月間合計</span>
+					<p id="send_month">0</p>
+				</div>
+			</div>
+
+			<div class="wrap_info_account">
+				<strong>アカウント</strong>
+				<div class="tbl">
+					<div class="cell">
+						<figure>
+							<span>登録件数</span>
+							<p id="account_regist">0/0</p>
+							<div id="chart_regist" class="pie"></div>
+						</figure>
+					</div>	
+					<div class="cell">
+						<figure>
+							<span>稼働件数</span>
+							<p id="account_active">0/0</p>
+							<div id="chart_active" class="pie"></div>
+						</figure>
+					</div>
+					<div class="cell">
+						<figure>
+							<span>エラー件数</span>
+							<p id="account_error">0/0</p>
+							<div id="chart_error" class="pie"></div>
+						</figure>
+					</div>
+				</div>
+
+				<div class="tbl">
+					<div class="cell">
+						<figure>
+							<span>種類別</span>
+							<div id="domains"></div>
+							<div id="chart_domain" class="pie"></div>
+						</figure>
+					</div>	
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>

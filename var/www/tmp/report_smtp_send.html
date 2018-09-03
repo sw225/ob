@@ -1,0 +1,52 @@
+<div class="wrap_report_smtp_send ctt">
+
+	<h3>配信レポート詳細</h3>
+
+	<div class="ctt_inner">
+		<p>配信レポートの詳細を確認します</p>
+
+		<form>
+			<input type="text" name="report_smtp_send" value="%date1%" placeholder="yyyy-mm-dd" />　～　<input type="text" name="date" value="%date2%" placeholder="yyyy-mm-dd" />
+			<!-- tmpl:ifdef %error_list% -->
+			<select name="err">
+				<!-- tmpl:loop %loop_error% -->
+				<option value="%error_val%"%selected%>%error_txt%</option>
+				<!-- tmpl:endloop %loop_error% -->
+			</select>
+			<!-- tmpl:endif -->
+			<input type="submit" value="検索" />
+			<p class="mt10">
+				<input type="text" name="from" value="%from%" placeholder="From Address" />
+				<input type="text" name="to" value="%to%" placeholder="To Address" />
+			</p>
+		</form>
+
+		<!-- tmpl:ifdef %send_list% -->
+		<table class="list_table no1">
+			<tr>
+				<th>No</th>
+				<th>From</th>
+				<th>To</th>
+				<th>Title</th>
+				<th>Error</th>
+				<th>Time</th>
+			</tr>
+			<!-- tmpl:loop %loop_sent% -->
+			<tr>
+				<td>%sent_num%</td>
+				<td>%sent_from%</td>
+				<td>%sent_to%</td>
+				<td>%sent_title%</td>
+				<td>%sent_error%</td>
+				<td class="rel">%sent_time%<span><b>%sent_title%</b>%sent_message%</span></td>
+			</tr>
+			<!-- tmpl:endloop %loop_sent% -->
+		</table>
+
+		<div class="pages">
+%paging%
+		</div>
+		<!-- tmpl:endif -->
+	</div>
+
+</div>

@@ -1,0 +1,5 @@
+NETWORKING=yes
+HOSTNAME=localhost.localdomain
+NETWORKING_IPV6="yes"
+IPV6_DEFAULTDEV="eth0"
+IPV6_DEFAULTGW="fe80::1"

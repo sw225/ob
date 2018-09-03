@@ -1,0 +1,70 @@
+<div class="wrap_manage_account ctt">
+
+	<h3>アカウント管理</h3>
+
+	<div class="ctt_inner">
+		<p>アカウントの設定・管理を行います</p>
+	
+		<!-- tmpl:ifdef %account_list% -->
+		<form method="post">
+			<table class="list_table no2 toleft">
+				<tr>
+					<th>
+						<div class="chk_cng">
+							<input type="checkbox" id="chk_cng" />
+							<label for="chk_cng"></label>
+						</div>
+					</th>
+					<th>No</th>
+					<th>
+						<div class="chk_act">
+							<input type="checkbox" id="chk_act" />
+							<label for="chk_act"></label>
+						</div>
+					</th>
+					<th>アドレス</th>
+					<th>USER</th>
+					<th>PASS</th>
+					<th>From名</th>
+					<th>備考</th>
+					<th>送信数</th>
+					<th>エラー</th>
+					<th>コード</th>
+					<th>エラー時間</th>
+				</tr>
+				<!-- tmpl:loop %loop_account% -->
+				<tr class="%account_tr_color%">
+					<td>
+						<div class="chk_cng">
+							<input type="checkbox" name="chk[]" id="chk_cng%account_id%" value="%account_id%" />
+							<label for="chk_cng%account_id%"></label>
+						</div>
+					</td>
+					<td>%account_num%</td>
+					<td>
+						<div class="chk_act">
+							<input type="checkbox" name="activate%account_id%" id="chk_act%account_id%" value="1" %account_checked%/>
+							<label for="chk_act%account_id%"></label>
+						</div>
+						<span>%account_state%</span>
+					</td>
+					<td>%account_address%</td>
+					<td>%account_user%</td>
+					<td>%account_pass%</td>
+					<td>%account_from_name%</td>
+					<td><textarea name="memo%account_id%">%account_memo%</textarea></td>
+					<td>%account_send_length% / %account_send_limit%</td>
+					<td>%account_error_count%</td>
+					<td>%account_error_code%</td>
+					<td>%account_error_time%</td>
+				</tr>
+				<!-- tmpl:endloop %loop_account% -->
+			</table>
+			<input type="submit" name="change" value="変更" />
+			<input type="submit" name="delete" value="削除" id="btn_del" />
+		</form>
+		<!-- tmpl:endif -->
+
+	</div>
+
+</div>

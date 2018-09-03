@@ -1,0 +1,3 @@
+<device DEVNO="0xfc01" TIME="1492239737.265737" LABEL="/boot" UUID="39798437-6861-4f15-b31c-5b8cadc62757" TYPE="ext4">/dev/vda1</device>
+<device DEVNO="0xfc02" TIME="1492239737.316488" LABEL="SWAP-vda2" UUID="819b6680-d0e2-4193-aa38-c3e97d63f456" TYPE="swap">/dev/vda2</device>
+<device DEVNO="0xfc03" TIME="1492239737.364849" LABEL="/" UUID="978d3837-dbff-4db5-be73-ed7e8d3f3f2a" TYPE="ext4">/dev/vda3</device>

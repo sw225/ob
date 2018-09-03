@@ -1,0 +1,28 @@
+<div class="wrap_setup_smtp_ip ctt">
+
+	<h3>送信許可IP設定</h3>
+
+	<div class="ctt_inner">
+		<p>使用を許可するIPの設定を行います</p>
+		
+		<form method="post">
+			<table class="list_table no1">
+				<tr>
+					<th>No</th>
+					<th>IP</th>
+					<th>備考</th>
+				</tr>
+				<!-- tmpl:loop %loop_ip% -->
+				<tr>
+					<td>%ip_num%<input type="hidden" name="ids[]" value="%ip_id%" /></td>
+					<td><input type="text" name="ip%ip_id%" value="%ip_ip%" /></td>
+					<td><textarea name="memo%ip_id%">%ip_memo%</textarea></td>
+				</tr>
+				<!-- tmpl:endloop %loop_ip% -->
+			</table>
+			<input type="submit" value="変更" />
+		</form>
+	</div>
+
+
+</div>

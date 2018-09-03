@@ -1,0 +1,65 @@
+<div class="wrap_setup_account ctt">
+
+	<h3>アカウント設定</h3>
+
+	<div class="ctt_inner">
+		<p>
+			アカウントの一括設定を行います<br />
+			アカウントの最大登録件数は「%max%」件です<br />
+			一括登録は「アドレス」「ユーザー名」「パスワード」を「,(カンマ)」区切りで入力し、１アカウント毎に改行してください
+		</p>
+
+		<div>
+			<h5 class="clear">一括登録</h5>
+			<form method="post">
+				<input type="hidden" name="type" value="import" />
+				<textarea name="dat"></textarea>
+
+				<input type="submit" value="登録" />
+			</form>
+
+		</div>
+
+		<!-- tmpl:ifdef %account_list% -->
+		<form method="post">
+			<input type="hidden" name="type" value="setup" />
+			<table class="list_table no2">
+				<tr>
+					<th>
+						<div class="chk_cng">
+							<input type="checkbox" id="chk_cng" />
+							<label for="chk_cng"></label>
+						</div>
+					</th>
+					<th>No</th>
+					<th>アドレス</th>
+					<th>USER</th>
+					<th>PASS</th>
+					<th>From名</th>
+					<th>備考</th>
+				</tr>
+				<!-- tmpl:loop %loop_account% -->
+				<tr class="%account_tr_color%">
+					<td>
+						<div class="chk_cng">
+							<input type="checkbox" name="chk[]" id="chk_cng%account_id%" value="%account_id%" />
+							<label for="chk_cng%account_id%"></label>
+						</div>
+					</td>
+					<td>%account_num%</td>
+					<td><input type="text" name="address%account_id%" value="%account_address%" /><input type="hidden" name="def%account_id%" value="%account_address%" /></td>
+					<td><input type="text" name="user%account_id%" value="%account_user%" /></td>
+					<td><input type="text" name="pass%account_id%" value="%account_pass%" /></td>
+					<td><input type="text" name="from_name%account_id%" value="%account_from_name%" /></td>
+					<td><textarea name="memo%account_id%">%account_memo%</textarea></td>
+				</tr>
+				<!-- tmpl:endloop %loop_account% -->
+			</table>
+			<input type="submit" name="change" value="変更" />
+			<!--<input type="submit" name="delete" value="削除" id="btn_del" />-->
+		</form>
+		<!-- tmpl:endif -->
+
+	</div>
+
+</div>

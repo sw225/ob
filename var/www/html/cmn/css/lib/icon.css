@@ -1,0 +1,145 @@
+
+*[class*="icon_"] { 
+	display: block; 
+	position: relative; 
+	z-index: 999;
+}
+
+.icon_home1:before {
+	content: '';
+	height: 11px;
+	width: 16px;
+	display: block;
+	border: 3px #676767 solid;
+	border-top: 0;
+	position: absolute;
+	top: 14px;
+	left: 5px;
+}
+.icon_home1:after {
+	content: '';
+	height: 9px;
+	width: 8px;
+	display: block;
+	position: absolute;
+	top: 18px;
+	left: 13px;
+	background: #676767;
+}
+.icon_home2:before {
+	content: '';
+	height: 9px;
+	width: 3px;
+	display: block;
+	position: absolute;
+	top: 3px;
+	left: 23px;
+	background: #676767;
+}
+.icon_home2:after {
+	content: '';
+	height: 16px;
+	width: 16px;
+	border-top: 5px #676767 solid;
+	border-right: 5px #676767 solid;
+	position: absolute;
+	top: 4px;
+	left: 6px;
+	transform: scale(1,0.8) rotate(-45deg);
+	-webkit-transform: scale(1,0.8) rotate(-45deg);
+	-moz-transform: scale(1,0.8) rotate(-45deg);
+	-o-transform: scale(1,0.8) rotate(-45deg);
+	-ms-transform: scale(1,0.8) rotate(-45deg);
+}
+
+
+.icon_batsu { 
+	border-radius: 50px; 
+	-webkit-border-radius: 50px; 
+	-moz-border-radius: 50px; 
+	border: 3px solid #676767; 
+	width: 21px; 
+	height: 21px; 
+}
+.icon_batsu:before, 
+.icon_batsu:after { 
+	content: ''; 
+	height: 3px; 
+	width: 17px; 
+	display: block; 
+	background: #676767; 
+	border-radius: 10px; 
+	-webkit-border-radius: 10px; 
+	-moz-border-radius: 10px; 
+	position: absolute; 
+	top: 9px; 
+	left: 2px; 
+	transform: rotate(-45deg); 
+	-webkit-transform: rotate(-45deg); 
+	-moz-transform: rotate(-45deg); 
+	-o-transform: rotate(-45deg); 
+	-ms-transform: rotate(-45deg); 
+}
+.icon_batsu:after { 
+	transform: rotate(45deg); 
+	-webkit-transform: rotate(45deg); 
+	-moz-transform: rotate(45deg); 
+	-o-transform: rotate(45deg); 
+	-ms-transform: rotate(45deg); 
+}
+
+.mig {
+	height: 24px;
+	position: absolute;
+	top: 9px;
+}
+.mig:before {
+	content: '';
+	height: 0;
+	width: 0;
+	display: block;
+	border: 13px transparent solid;
+	border-right-width: 0;
+	border-left-color: #3B9FC5;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.mig:after {
+	content: '';
+	height: 9px;
+	width: 17px;
+	display: block;
+	background: #3B9FC5;
+	position: absolute;
+	top: 8.2px;
+	left: 0px;
+}
+
+.hdr {
+	height: 24px;
+	position: absolute;
+	top: 9px;
+}
+.hdr:before {
+	content: '';
+	height: 0;
+	width: 0;
+	display: block;
+	border: 13px transparent solid;
+	border-left-width: 0;
+	border-right-color: #C53B3B;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.hdr:after {
+	content: '';
+	height: 9px;
+	width: 17px;
+	display: block;
+	background: #C53B3B;
+	position: absolute;
+	top: 8px;
+	right: 0px;
+}

@@ -1,0 +1,42 @@
+<script src="cmn/js/lib/amcharts.js"></script>
+<script src="cmn/js/lib/serial.js"></script>
+<script src="cmn/js/chart_month.js"></script>
+
+<div class="wrap_report_smtp_month ctt">
+
+	<h3>日別配信レポート</h3>
+
+	<div class="ctt_inner">
+		<p>日別配信レポートの確認を行います</p>
+		
+		<form>
+			<input type="text" name="report_smtp_month" id="data" value="" placeholder="yyyy-mm" />
+			<input type="submit" value="検索" />
+		</form>
+
+		<table class="list_table">
+			<tr>
+				<!-- tmpl:loop %loop_th% -->
+				<th>%th%</th>
+				<!-- tmpl:endloop %loop_th% -->
+			</tr>
+			<tr>
+				<!-- tmpl:loop %loop_ok% -->
+				<td>%ok%</td>
+				<!-- tmpl:endloop %loop_ok% -->
+			</tr>
+			<tr>
+				<!-- tmpl:loop %loop_ng% -->
+				<td>%ng%</td>
+				<!-- tmpl:endloop %loop_ng% -->
+			</tr>
+			<tr>
+				<!-- tmpl:loop %loop_pc% -->
+				<td>%pc%</td>
+				<!-- tmpl:endloop %loop_pc% -->
+			</tr>
+		</table>
+	</div>
+	<div id="chart"></div>
+
+</div>

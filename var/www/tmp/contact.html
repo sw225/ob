@@ -1,0 +1,35 @@
+<div class="wrap_contact ctt">
+
+	<h3>問い合わせ</h3>
+
+	<div class="ctt_inner">
+		<p>
+			サポートへの問い合わせを行います<br />
+			ご質問の内容や、混雑状況により、返答までにお時間をいただく場合がございます
+		</p>
+
+		<form method="post" class="set">
+			<div>
+				<strong>本文</strong>
+				<textarea name="message"></textarea>
+			</div>
+			<input type="submit" value="送信" />
+		</form>
+
+		<!-- tmpl:ifdef %contact_list% -->
+		<h5>問い合わせ一覧</h5>
+		<ul>
+			<!-- tmpl:loop %loop_contact% -->
+			<li class="%contact_class%">
+				<span class="%contact_icon%"></span>
+				<b>%contact_time%</b>
+				<p>%contact_message%</p>
+			</li>
+			<!-- tmpl:endloop %loop_contact% -->
+		</ul>
+		<!-- tmpl:endif -->
+
+	</div>
+</div>
+
+
