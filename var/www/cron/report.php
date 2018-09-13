@@ -11,9 +11,6 @@ $proc = array();
 if ( !exec( 'ps ax | grep -e report.php | grep -v grep', $proc, $result ) ) {
     exit;
 }
-if ( count( $proc ) > 1 ) {
-    exit;
-}
 
 
 $dir = '/var/www/';	#	'../';	#	
