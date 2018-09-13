@@ -10,11 +10,13 @@
 $proc = array();
 if ( !exec( 'ps ax | grep -e main.php | grep -v grep', $proc, $result ) ) { 
 #echo 1;
+    error_log("すでに実行中のプロセスが存在するため、強制終了します。");
     exit;
 }
 if ( count( $proc ) > 1 ) {
 #var_dump($proc);
 #echo 2;
+    error_log("すでに実行中のプロセスが複数存在するため、強制終了します。");
     exit;
 }
 
@@ -22,7 +24,7 @@ $dir = '/var/www/';	#	'../';	#
 require_once $dir.'db/connect.php';
 require_once $dir.'cls/db/index.php';
 require_once $dir.'cls/db/wrap.php';
-require_once 'send.php';
+require_once $dir.'send.php';
 
 $Inst = new WARP( $CONNECT );
 
