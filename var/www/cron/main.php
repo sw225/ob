@@ -24,7 +24,7 @@ $dir = '/var/www/';	#	'../';	#
 require_once $dir.'db/connect.php';
 require_once $dir.'cls/db/index.php';
 require_once $dir.'cls/db/wrap.php';
-require_once $dir.'send.php';
+require_once $dir.'cron/send.php';
 
 $Inst = new WARP( $CONNECT );
 
