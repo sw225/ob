@@ -151,48 +151,50 @@ echo "--------------------------------------------------------------------------
 			$ttl = $Inst -> Quote( $title );
 			$msg = $Inst -> Quote( $message );
 			if ( !empty( $err ) ) { 
-				##### 失敗 #####
+                            error_log("type:error メールサーバとのコネクションが確立できませんでした。");
+                            ##### 失敗 #####
 
-				## retry数 確認 ##
-				if ( $retry_count < ++$res_account_list[ $c ]['error_count'] ) { 
-					# retry 上限に達した # 
-					unset( $res_account_list[ $c ] );
-					$len = count( $res_account_list );
-					if ( 0 === $len ) { 
-						$flg = true;
-					}
-				}
-				## error time 更新 ##
-				$dt  = date('Y-m-d H:i:s');
-				if ( preg_match( '/.*code ?:? ?(-?\d+).*/i', $err, $res_error ) ) { 
-					$err_num = ( count( $res_error ) ) ? trim( $res_error[1] ) : '';
-					# 画像認証 エラー 判定 #
-					if ( '521' === $err_num ) { 
-						if ( strstr( $err, 'Your SMTP service is temporarily stopped' ) ) { 
-							$dt  = '9999-12-31 23:59:59';
-						}
-					}
-				}
-				$res_account_list[ $c ]['error_time'] = $dt;
+                            ## retry数 確認 ##
+                            if ( $retry_count < ++$res_account_list[ $c ]['error_count'] ) { 
+                                # retry 上限に達した # 
+                                error_log("type:error リトライ数の上限に達したため、配信処理を停止します。");
+                                unset( $res_account_list[ $c ] );
+                                $len = count( $res_account_list );
+                                if ( 0 === $len ) { 
+                                        $flg = true;
+                                }
+                            }
+                            ## error time 更新 ##
+                            $dt  = date('Y-m-d H:i:s');
+                            if ( preg_match( '/.*code ?:? ?(-?\d+).*/i', $err, $res_error ) ) { 
+                                    $err_num = ( count( $res_error ) ) ? trim( $res_error[1] ) : '';
+                                    # 画像認証 エラー 判定 #
+                                    if ( '521' === $err_num ) { 
+                                            if ( strstr( $err, 'Your SMTP service is temporarily stopped' ) ) { 
+                                                    $dt  = '9999-12-31 23:59:59';
+                                            }
+                                    }
+                            }
+                            $res_account_list[ $c ]['error_time'] = $dt;
 
-				$err = $Inst -> Quote( $err );
-				$upd = array( 
-					"UPDATE {$TableAccount} SET send_length = send_length + 1, error_count = error_count + 1, error_txt = {$err}, error_time = '{$dt}' WHERE id = {$smtp_id};", 
-					"UPDATE {$TableQueue} SET activate = 0, error = 1 WHERE id = {$queue_id};", 
-					sprintf(
-						"INSERT INTO %s VALUES ( NULL, '%s', '%s', %s, %s, %s, CURRENT_TIMESTAMP );", 
-						$TableSent, 
-						$smtp['address'], 
-						$send['to'], 
-						$ttl, 
-						$msg, 
-						$err
-					)
-				);
+                            $err = $Inst -> Quote( $err );
+                            $upd = array( 
+                                "UPDATE {$TableAccount} SET send_length = send_length + 1, error_count = error_count + 1, error_txt = {$err}, error_time = '{$dt}' WHERE id = {$smtp_id};", 
+                                "UPDATE {$TableQueue} SET activate = 0, error = 1 WHERE id = {$queue_id};", 
+                                sprintf(
+                                        "INSERT INTO %s VALUES ( NULL, '%s', '%s', %s, %s, %s, CURRENT_TIMESTAMP );", 
+                                        $TableSent, 
+                                        $smtp['address'], 
+                                        $send['to'], 
+                                        $ttl, 
+                                        $msg, 
+                                        $err
+                                )
+                            );
 			} 
 			else { 
 				##### 成功 #####
-
+                                error_log("type:success 送信に成功しました。");
 				## error time 更新 ##
 				$dt  = '0000-00-00 00:00:00';
 				$res_account_list[ $c ]['error_time'] = $dt;
@@ -215,12 +217,13 @@ echo "--------------------------------------------------------------------------
 			## 送信上限 確認 ##
 			if ( isset( $res_account_list[ $c ] ) && $res_account_list[ $c ]['send_length'] ) { 
 				if ( $send_limit < ++$res_account_list[ $c ]['send_length'] ) { 
-					# limit までいった # 
-					unset( $res_account_list[ $c ] );
-					$len = count( $res_account_list );
-					if ( 0 === $len ) { 
-						$flg = true;
-					}
+                                    # limit までいった # 
+                                    error_log("type:error 送信数の上限に達したため、配信処理を停止します。");
+                                    unset( $res_account_list[ $c ] );
+                                    $len = count( $res_account_list );
+                                    if ( 0 === $len ) { 
+                                            $flg = true;
+                                    }
 				}
 			}
 
