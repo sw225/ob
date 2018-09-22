@@ -6,6 +6,21 @@ require_once('Mail.php');
 mb_language('japanese');
 mb_internal_encoding('utf8');
 
+/**
+ * 
+ * @param type $_argv<br />
+ *     	'to'          => 宛先, 
+ *      'from'        => FROMアドレス,
+ *      'from_mk'     => 優先される差出人名,
+ *      'from_def'    => from_mkがない場合に適用される差出人名, 
+ *      'smtp_server' => SMTPサーバ host,
+ *      'smtp_port'   => SMTPサーバ port,
+ *      'user'        => ユーザ名,
+ *      'pass'        => パスワード,
+ *      'title'       => メールSubject,
+ *      'message'     => メールBody
+ * @return type
+ */
 function mailsend( $_argv ) { 
     extract( $_argv );
 
