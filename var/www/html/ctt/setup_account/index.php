@@ -155,7 +155,7 @@ $res_account_list = array_merge( $ary_busy, $ary_blank );
 
 $co = 0;
 $tmpl -> loopset( 'loop_account' );
-foreach ( $res_account_list as $ary ) { 
+foreach ( $res_account_list as $ary ) {
 	$tmpl -> assign( 'account_id',          $ary['id'] );
 	$tmpl -> assign( 'account_num',         ++$co );
 	$tmpl -> assign( 'account_address',     $ary['address'] );

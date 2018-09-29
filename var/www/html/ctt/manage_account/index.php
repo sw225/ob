@@ -83,7 +83,7 @@ $res_account_list =
 						)
 					), 
 				'jin' => $TableServer, 
-				'on'  => "{$TableAccount}.domain = {$TableServer}.domain", 
+				'on'  => "{$TableAccount}.domain like concat('%', {$TableServer}.domain)", 
 				'oby' => "{$TableAccount}.created ASC"
 			)
 		);
