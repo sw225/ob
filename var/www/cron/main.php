@@ -45,7 +45,7 @@ FROM
 	INNER JOIN `interval` 
 	INNER JOIN counter
 ON 
-	account.domain = server.domain
+	account.domain like concat('%', server.domain)
 ;
 SQL;
 	$res_account_list = $Inst -> SelectAll( $qry );
