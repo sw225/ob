@@ -1,6 +1,6 @@
 <?php
 
-require_once('MAIL/mimeDecode.php');
+require_once('Mail/mimeDecode.php');
 
 $prm['include_bodies'] = true; 
 $prm['decode_bodies']  = true; 
