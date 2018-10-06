@@ -74,9 +74,9 @@ SQL;
 
 			$smtp_id  = $smtp['id'];
 			$queue_id = $send['id'];
-                        error_log("type:info smtp_parameters=" . print_r($smtp, true));
-			extract( $smtp );
-			extract( $send );
+                        
+			if(!empty($smtp) && count($smtp)) extract( $smtp );
+			if(!empty($send) && count($send)) extract( $send );
 			
 			if ( 1 != $smtp['activate'] ) { 
 				if ( $len <= ++$c ) { 
