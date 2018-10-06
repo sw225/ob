@@ -134,22 +134,28 @@ echo $send['message']."\n";
 echo "---------------------------------------------------------------------------\n";
 */
 			##### メール送信 #####
-			$prm = array( 
-				'to'          => $to, 
-				'from'        => $address, 
-				'from_mk'     => $from_mk, 
-				'from_def'    => $from_def, 
-				'smtp_server' => $smtp_server, 
-				'smtp_port'   => $smtp_port, 
-				'user'        => $user, 
-				'pass'        => $pass, 
-				'title'       => $title, 
-				'message'     => $message
-			);
-			$err = mailsend( $prm );
-
-			$ttl = $Inst -> Quote( $title );
-			$msg = $Inst -> Quote( $message );
+                        try {
+                            $prm = array( 
+                                    'to'          => $to, 
+                                    'from'        => $address, 
+                                    'from_mk'     => $from_mk, 
+                                    'from_def'    => $from_def, 
+                                    'smtp_server' => $smtp_server, 
+                                    'smtp_port'   => $smtp_port, 
+                                    'user'        => $user, 
+                                    'pass'        => $pass, 
+                                    'title'       => $title, 
+                                    'message'     => $message
+                            );
+                            $err = mailsend( $prm );
+                            $ttl = $Inst -> Quote( $title );
+                            $msg = $Inst -> Quote( $message );
+                        } catch(Exception $e) {
+                            // 何かしらのエラーが発生し、Exceptionをキャッチできた場合は
+                            // $errにメッセージを格納
+                            $err = $e->getMessage();
+                            error_log("type:error Exceptionが発生しました。 error_description=" . $e->getMessage());
+                        }
 			if ( !empty( $err ) ) { 
                             error_log("type:error メールサーバとのコネクションが確立できませんでした。");
                             ##### 失敗 #####
@@ -230,8 +236,8 @@ echo "--------------------------------------------------------------------------
 			$qry = $Inst -> Sql( implode( "\n", $upd ) );
 			if ( $qry ) { 
 				$qry -> closeCursor();
-			} 
-			else { 
+			} else { 
+                                error_log("type:warning updateの処理に失敗したため、リトライします。sleep=1, sql=" . $qry);
 				sleep(1);
 
 				# 失敗 やり直し #
@@ -245,6 +251,10 @@ echo "--------------------------------------------------------------------------
 					exit ;
 				}				
 			}
+                        
+			if ( $slp ) { 
+				sleep( $slp );
+			}
 			
 			if ( $flg ) { 
 				# 送信可能アドレスがない #
@@ -253,9 +263,6 @@ echo "--------------------------------------------------------------------------
 
 			if ( $len <= ++$c ) { 
 				$c = 0;
-			}
-			if ( $slp ) { 
-				sleep( $slp );
 			}
 
 			$co = 0;
