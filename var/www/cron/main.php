@@ -134,7 +134,6 @@ echo $send['message']."\n";
 echo "---------------------------------------------------------------------------\n";
 */
 			##### メール送信 #####
-                        try {
                             $prm = array( 
                                     'to'          => $to, 
                                     'from'        => $address, 
@@ -147,18 +146,12 @@ echo "--------------------------------------------------------------------------
                                     'title'       => $title, 
                                     'message'     => $message
                             );
-                            // ログ出力用パラメータ
-                            $log_param = "to=$to, from=$address, from_mk=$from_mk, from_def=$from_def, smtp_server=$smtp_server, smtp_port=$smtp_port, user=$user, title=$title";
-                            
-                            $err = mailsend( $prm );
-                            $ttl = $Inst -> Quote( $title );
-                            $msg = $Inst -> Quote( $message );
-                        } catch(Exception $e) {
-                            // 何かしらのエラーが発生し、Exceptionをキャッチできた場合は
-                            // $errにメッセージを格納
-                            $err = $e->getMessage();
-                            error_log("type:error Exceptionが発生しました。 $log_param error_description=" . $e->getMessage());
-                        }
+                        // ログ出力用パラメータ
+                        $log_param = "to=$to, from=$address, from_mk=$from_mk, from_def=$from_def, smtp_server=$smtp_server, smtp_port=$smtp_port, user=$user, title=$title";
+
+                        $err = mailsend( $prm );
+                        $ttl = $Inst -> Quote( $title );
+                        $msg = $Inst -> Quote( $message );
 			if ( !empty( $err ) ) { 
                             error_log("type:error メールサーバとのコネクションが確立できませんでした。 $log_param");
                             ##### 失敗 #####
