@@ -74,7 +74,7 @@ SQL;
 
 			$smtp_id  = $smtp['id'];
 			$queue_id = $send['id'];
-
+                        error_log("type:info smtp_parameters=" . print_r($smtp, true));
 			extract( $smtp );
 			extract( $send );
 			
@@ -147,6 +147,9 @@ echo "--------------------------------------------------------------------------
                                     'title'       => $title, 
                                     'message'     => $message
                             );
+                            // ログ出力用パラメータ
+                            $log_param = "to=$to, from=$address, from_mk=$from_mk, from_def=$from_def, smtp_server=$smtp_server, smtp_port=$smtp_port, user=$user, title=$title";
+                            
                             $err = mailsend( $prm );
                             $ttl = $Inst -> Quote( $title );
                             $msg = $Inst -> Quote( $message );
@@ -154,16 +157,16 @@ echo "--------------------------------------------------------------------------
                             // 何かしらのエラーが発生し、Exceptionをキャッチできた場合は
                             // $errにメッセージを格納
                             $err = $e->getMessage();
-                            error_log("type:error Exceptionが発生しました。 error_description=" . $e->getMessage());
+                            error_log("type:error Exceptionが発生しました。 $log_param error_description=" . $e->getMessage());
                         }
 			if ( !empty( $err ) ) { 
-                            error_log("type:error メールサーバとのコネクションが確立できませんでした。");
+                            error_log("type:error メールサーバとのコネクションが確立できませんでした。 $log_param");
                             ##### 失敗 #####
 
                             ## retry数 確認 ##
                             if ( $retry_count < ++$res_account_list[ $c ]['error_count'] ) { 
                                 # retry 上限に達した # 
-                                error_log("type:error リトライ数の上限に達したため、配信処理を停止します。");
+                                error_log("type:error リトライ数の上限に達したため、配信処理を停止します。 $log_param");
                                 unset( $res_account_list[ $c ] );
                                 $len = count( $res_account_list );
                                 if ( 0 === $len ) { 
@@ -200,7 +203,7 @@ echo "--------------------------------------------------------------------------
 			} 
 			else { 
 				##### 成功 #####
-                                error_log("type:success 送信に成功しました。");
+                                error_log("type:success 送信に成功しました。 $log_param");
 				## error time 更新 ##
 				$dt  = '0000-00-00 00:00:00';
 				$res_account_list[ $c ]['error_time'] = $dt;
@@ -224,7 +227,7 @@ echo "--------------------------------------------------------------------------
 			if ( isset( $res_account_list[ $c ] ) && $res_account_list[ $c ]['send_length'] ) { 
 				if ( $send_limit < ++$res_account_list[ $c ]['send_length'] ) { 
                                     # limit までいった # 
-                                    error_log("type:error 送信数の上限に達したため、配信処理を停止します。");
+                                    error_log("type:error 送信数の上限に達したため、配信処理を停止します。 $log_param");
                                     unset( $res_account_list[ $c ] );
                                     $len = count( $res_account_list );
                                     if ( 0 === $len ) { 
