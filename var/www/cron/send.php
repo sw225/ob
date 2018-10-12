@@ -36,7 +36,13 @@ function mailsend( $_argv ) {
             $from     = sprintf( '"%s"<%s>', $from_def, $from );
         }
     }
-
+    
+    // SSL送信の場合、ユーザとパスワードをbase64でエンコード
+    if($smtp_port == '465') {
+        $user = base64_encode ($user);
+        $pass = base64_encode($pass);
+    }
+    
     $params =
         array(
             'host'     => $smtp_server,
