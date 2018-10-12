@@ -37,11 +37,9 @@ function mailsend( $_argv ) {
         }
     }
     
-    $tls = ($smtp_port == '465') ? "tls://" : "";
-    
     $params =
         array(
-            'host'     => $tls . $smtp_server,
+            'host'     => $smtp_server,
             'port'     => $smtp_port,
             'auth'     => true,
             'debug'    => false,
