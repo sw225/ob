@@ -37,15 +37,11 @@ function mailsend( $_argv ) {
         }
     }
     
-    // SSL送信の場合、ユーザとパスワードをbase64でエンコード
-    if($smtp_port == '465') {
-        $user = base64_encode ($user);
-        $pass = base64_encode($pass);
-    }
+    $tls = ($smtp_port == '465') ? "tls://" : "";
     
     $params =
         array(
-            'host'     => $smtp_server,
+            'host'     => $tls . $smtp_server,
             'port'     => $smtp_port,
             'auth'     => true,
             'debug'    => false,
